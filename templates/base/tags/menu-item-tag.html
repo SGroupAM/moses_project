@@ -13,11 +13,11 @@
 
 {#        {% for item_t in item.itemmenulang.all %}#}
             {% if a %}
-                <a class="{{ a }}" href="{{ item.url }}">{{ item.get_title }}</a>
+                <a class="{{ a }}" href="{{ item.item.url }}">{{ item.get_title }}</a>
             {% elif item.style_a %}
-                <a class="{{ item.style_a }}" href="{{ item.url }}">{{ item.get_title }}</a>
+                <a class="{{ item.style_a }}" href="{{ item.item.url }}">{{ item.get_title }}</a>
             {% else %}
-                <a class="" href="{{ item.url }}">{{ item.get_title}}</a>
+                <a class="" href="{{ item.item.url }}">{{ item.get_title}}</a>
             {% endif %}
 {#        {% endfor %}#}
         </li>
@@ -30,11 +30,11 @@
         {% endif %}
 
         {% if a %}
-            <a class="{{ a }}" href="{{ item.get_anchor }}">{{ item.get_title }}</a>
+            <a class="{{ a }}" href="{{ item.item.get_anchor }}">{{ item.get_title }}</a>
         {% elif item.style_a %}
-            <a class="{{ item.style_a }}" href="{{ item.get_anchor }}">{{ item.get_title }}</a>
+            <a class="{{ item.style_a }}" href="{{ item.item.get_anchor }}">{{ item.get_title }}</a>
         {% else %}
-            <a class="" href="{{ item.get_anchor }}">{{ item.get_title}}</a>
+            <a class="" href="{{ item.item.get_anchor }}">{{ item.get_title}}</a>
         {% endif %}
         </li>
 
@@ -47,13 +47,13 @@
         {% endif %}
 
         {% if a %}
-            <a class="{{ a }}" href="{{ item.content_object.get_absolute_url }}">{{ item.get_title }}</a>
+            <a class="{{ a }}" href="{{ item.item.content_object.get_absolute_url }}">{{ item.get_title }}</a>
         {% elif item.style_a %}
             <a class="{{ item.style_a }}"
-               href="{{ item.content_object.get_absolute_url }}">{{ item.get_title }}</a>
+               href="{{ item.item.content_object.get_absolute_url }}">{{ item.get_title }}</a>
 
         {% else %}
-            <a class="" href="{{ item.content_object.get_absolute_url }}">{{ item.get_title }}</a>
+            <a class="" href="{{ item.item.content_object.get_absolute_url }}">{{ item.get_title }}</a>
         {% endif %}
 
 
